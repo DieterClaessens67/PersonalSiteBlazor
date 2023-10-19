@@ -1,5 +1,3 @@
-[[_TOC_]]
-
 # PersonalSiteBlazor
 My personal website made in blazor
 

@@ -42,3 +42,8 @@ artifacts/
 
 # User-specific Visual Studio for Mac files
 .idea/
+
+
+#exclude 
+/net6.0/
+PersonalSite/obj/Debug/net6.0/

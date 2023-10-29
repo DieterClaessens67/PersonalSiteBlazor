@@ -1,3 +1,14 @@
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#app > div > div > div.top-row.ps-3.navbar.navbar-dark{
+    height: 10em;
+}
+
 .navbar-toggler {
     background-color: rgba(255, 255, 255, 0.1);
 }

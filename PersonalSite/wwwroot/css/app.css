@@ -1,5 +1,19 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
+.navSocials{
+    display:flex;
+    justify-content: flex-start;
+}
+
+.expertiseGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-content: center;
+    margin-left: 20em;
+    margin-bottom: 1em
+}
+
+
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }

@@ -1,9 +1,170 @@
 ﻿@page "/"
+@using BlazorTypewriter;
 
-<PageTitle>Home</PageTitle>
+<link href="_content/BlazorTypewriter/styles.css" rel="stylesheet" />
 
-<h1>Hello, world!</h1>
+<PageTitle>About</PageTitle>
 
-Not to your new app is it.
+<div class="background-container">
+    <h1>About</h1>
+    <p>Welcome to my company's page. This company is a new startup company, our goal is to help businesses achieve their digital transformation goals. </p>
+    <p>The technology landscape is constantly evolving and so must follow. We bridge the gap between your business and cutting-edge technology solutions.</p>
+    <p>Our mission is to empower you with the tools and strategies you need to thrive in the digital age.</p>
+    @*<p><Typewriter Builder="@typewriter" /></p>*@
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    <hr />
+
+    <h1>My expertise</h1>
+    <p>I specialize in a wide range of software consulting services, including but not limited to:</p>
+    <div class="expertiseGrid">
+        <Card Style="width:18rem;">
+            <img class="rounded-top" src="Images/SoftwareDevelopment.jpg" alt="placeholder" />
+            <CardBody>
+                <CardTitle>Custom Software Development</CardTitle>
+                <CardText> Tailored solutions to meet your unique business needs. Our software is not just functional; it's an asset that drives your success.</CardText>
+            </CardBody>
+        </Card>
+        <Card Style="width:18rem;">
+            <img class="rounded-top" src="Images/DigitalTransformation.jpg" alt="placeholder" />
+            <CardBody>
+                <CardTitle>Digital Transformation</CardTitle>
+                <CardText> We help you transition smoothly to modern technologies, enhancing your efficiency and competitiveness.</CardText>
+            </CardBody>
+        </Card>
+        <Card Style="width:18rem;">
+            <img class="rounded-top" src="Images/CloudSolutions.jpg" alt="placeholder" />
+            <CardBody>
+                <CardTitle>Cloud Solutions</CardTitle>
+                <CardText> Leverage the power of the cloud to scale your operations and access your data securely from anywhere.</CardText>
+            </CardBody>
+        </Card>
+    </div>
+
+    <hr />
+
+    <h1>Why choose me</h1>
+    <div>
+        <p>With 2 years of experience in the field of software development and consulting, I believe I have a good skill in finding the best IT solutions for your business needs.</p>
+        <p>I always work with an agile approach and in different sprints with demo's to continually insure the customer's needs are met.</p>
+        <p>Furthermore I provide:</p>
+        <ul>
+            <li><b>Tailored Solutions:</b></li>
+            I don't believe in one-size-fits-all. Our solutions are customized to address your unique challenges and opportunities.
+            <li><b>Cutting-Edge Technology:</b></li>
+            I try and stay at the forefront of industry trends to provide you with the latest and greatest technological advancements.
+            <li><b>Client-Centric Approach:</b></li>
+            Your success is our success. We work closely with you to ensure your objectives are met, and your expectations are exceeded.
+        </ul>
+    </div>
+    
+    <hr />
+
+    <h1>Skills</h1>
+    <p>An other reason to choose me is my skills!</p>
+    <p>I have experience making and maintaining .NET applications for various customers.</p>
+    <p>Below you can see the skills I have with the different programming languages/ solutions:</p>
+    <div class="skill">
+        <label>C#:</label>
+        <Progress Class="mb-3">
+            <ProgressBar Color="ProgressColor.Success" Width="80" />
+        </Progress>
+    </div>
+    <div class="skill">
+        <label>HTML & CSS:</label>
+        <Progress Class="mb-3">
+            <ProgressBar Color="ProgressColor.Success" Width="80" />
+        </Progress>
+    </div>
+    <div class="skill">
+        <label>Javascript:</label>
+        <Progress Class="mb-3">
+            <ProgressBar Color="ProgressColor.Success" Width="60" />
+        </Progress>
+    </div>
+    <div class="skill">
+        <label>Java:</label>
+        <Progress Class="mb-3">
+            <ProgressBar Color="ProgressColor.Success" Width="60" />
+        </Progress>
+    </div>
+    <div class="skill">
+        <label>Kotlin:</label>
+        <Progress Class="mb-3">
+            <ProgressBar Color="ProgressColor.Success" Width="40" />
+        </Progress>
+    </div>
+    <div class="skill">
+        <label>Cloud technologies:</label>
+        <Progress Class="mb-3">
+            <ProgressBar Color="ProgressColor.Success" Width="50" />
+        </Progress>
+    </div>
+
+    <hr />
+
+    <h1>Languages</h1>
+    <p>Below the languages I speak:</p>
+    <div class="skill">
+        <label>Dutch (my mother tongue):</label>
+        <Progress Class="mb-3">
+            <ProgressBar Color="ProgressColor.Success" Width="100" />
+        </Progress>
+    </div>
+    <div class="skill">
+        <label>Dutch (my mother tongue):</label>
+        <Progress Class="mb-3">
+            <ProgressBar Color="ProgressColor.Success" Width="100" />
+        </Progress>
+    </div>
+    <div class="skill">
+        <label>English:</label>
+        <Progress Class="mb-3">
+            <ProgressBar Color="ProgressColor.Success" Width="90" />
+        </Progress>
+    </div>
+    <div class="skill">
+        <label>German:</label>
+        <Progress Class="mb-3">
+            <ProgressBar Color="ProgressColor.Success" Width="70" />
+        </Progress>
+    </div>
+    <div class="skill">
+        <label>French:</label>
+        <Progress Class="mb-3">
+            <ProgressBar Color="ProgressColor.Success" Width="70" />
+        </Progress>
+    </div>
+    <div class="skill">
+        <label>Japanese:</label>
+        <Progress Class="mb-3">
+            <ProgressBar Color="ProgressColor.Success" Width="40" />
+        </Progress>
+    </div>
+    <hr />
+
+    <h1>Get in Touch</h1>
+    <p>
+        If you're ready to explore how I can take your business to new heights, <a href="contact">contact</a> me today. I am excited to learn more about your goals and discuss how we can work together to turn your vision into a reality.
+
+        Thank you for considering me as your software consulting partner.
+
+    </p>
+</div>
+
+@code {
+    TypewriterBuilder typewriter = new TypewriterBuilder(defaultCharacterPause: 6)
+        .TypeString("I am a Software engineer.", 50)
+        .Pause(1000)
+        .DeleteAll(30)
+        .TypeString("I love developing apps.", 50)
+        .Pause(1000)
+        .DeleteAll(30)
+        .TypeString("I make .NET applications.", 50)
+        .Pause(500)
+        .DeleteAll(30)
+        .Pause(100)
+        .Loop();
+}
+
+
+@*<SurveyPrompt Title="How is Blazor working for you?" />*@

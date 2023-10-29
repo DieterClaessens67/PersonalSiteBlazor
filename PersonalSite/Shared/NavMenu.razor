@@ -3,32 +3,50 @@
         <a class="navbar-brand" href="">@name</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
-        </button>
+        </button>        
     </div>
+    <img src="Images/ProfilePicture.jpg" alt="Profile Picture" class="profile-picture" />
 </div>
 
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <nav class="flex-column">
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Services
+                <span class="oi oi-person" aria-hidden="true"></span> About
             </NavLink>
         </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Testimonies
+                <span class="oi oi-thumb-up" aria-hidden="true"></span> Testimonies
             </NavLink>
         </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="contact">
+                <span class="oi oi-envelope-closed" aria-hidden="true"></span> Contact
+            </NavLink>
+        </div>
+        <div class="navSocials">
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="https://www.facebook.com/ClaessensInformatica">
+                    <span><Icon Name="IconName.Facebook" Size="IconSize.x4" Color="IconColor.Light" /></span>
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="https://www.linkedin.com/in/dieter-claessens-70283919b/">
+                    <span><Icon Name="IconName.Linkedin" Size="IconSize.x4" Color="IconColor.Light" /></span>
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="https://www.youtube.com">
+                    <span><Icon Name="IconName.Youtube" Size="IconSize.x4" Color="IconColor.Light" /></span>
+                </NavLink>
+            </div>
+        </div>       
     </nav>
 </div>
 
 @code {
-    private string name = "Dieter Claessens";
+    private string name = "Software Solutions";
     private bool collapseNavMenu = true;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;

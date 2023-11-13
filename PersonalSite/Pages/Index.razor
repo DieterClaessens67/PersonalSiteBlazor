@@ -17,14 +17,14 @@
     <h1>My expertise</h1>
     <p>I specialize in a wide range of software consulting services, including but not limited to:</p>
     <div class="expertiseGrid">
-        <Card Style="width:18rem;">
+        <Card Style="width:18rem; margin-right:1em;">
             <img class="rounded-top" src="Images/SoftwareDevelopment.jpg" alt="placeholder" />
             <CardBody>
                 <CardTitle>Custom Software Development</CardTitle>
                 <CardText> Tailored solutions to meet your unique business needs. Our software is not just functional; it's an asset that drives your success.</CardText>
             </CardBody>
         </Card>
-        <Card Style="width:18rem;">
+        <Card Style="width:18rem; margin-right:1em;">
             <img class="rounded-top" src="Images/DigitalTransformation.jpg" alt="placeholder" />
             <CardBody>
                 <CardTitle>Digital Transformation</CardTitle>
@@ -59,112 +59,13 @@
     
     <hr />
 
-    <h1>Skills</h1>
-    <p>An other reason to choose me is my skills!</p>
-    <p>I have experience making and maintaining .NET applications for various customers.</p>
-    <p>Below you can see the skills I have with the different programming languages/ solutions:</p>
-    <div class="skill">
-        <label>C#:</label>
-        <Progress Class="mb-3">
-            <ProgressBar Color="ProgressColor.Success" Width="80" />
-        </Progress>
-    </div>
-    <div class="skill">
-        <label>HTML & CSS:</label>
-        <Progress Class="mb-3">
-            <ProgressBar Color="ProgressColor.Success" Width="80" />
-        </Progress>
-    </div>
-    <div class="skill">
-        <label>Javascript:</label>
-        <Progress Class="mb-3">
-            <ProgressBar Color="ProgressColor.Success" Width="60" />
-        </Progress>
-    </div>
-    <div class="skill">
-        <label>Java:</label>
-        <Progress Class="mb-3">
-            <ProgressBar Color="ProgressColor.Success" Width="60" />
-        </Progress>
-    </div>
-    <div class="skill">
-        <label>Kotlin:</label>
-        <Progress Class="mb-3">
-            <ProgressBar Color="ProgressColor.Success" Width="40" />
-        </Progress>
-    </div>
-    <div class="skill">
-        <label>Cloud technologies:</label>
-        <Progress Class="mb-3">
-            <ProgressBar Color="ProgressColor.Success" Width="50" />
-        </Progress>
-    </div>
-
-    <hr />
-
-    <h1>Languages</h1>
-    <p>Below the languages I speak:</p>
-    <div class="skill">
-        <label>Dutch (my mother tongue):</label>
-        <Progress Class="mb-3">
-            <ProgressBar Color="ProgressColor.Success" Width="100" />
-        </Progress>
-    </div>
-    <div class="skill">
-        <label>Dutch (my mother tongue):</label>
-        <Progress Class="mb-3">
-            <ProgressBar Color="ProgressColor.Success" Width="100" />
-        </Progress>
-    </div>
-    <div class="skill">
-        <label>English:</label>
-        <Progress Class="mb-3">
-            <ProgressBar Color="ProgressColor.Success" Width="90" />
-        </Progress>
-    </div>
-    <div class="skill">
-        <label>German:</label>
-        <Progress Class="mb-3">
-            <ProgressBar Color="ProgressColor.Success" Width="70" />
-        </Progress>
-    </div>
-    <div class="skill">
-        <label>French:</label>
-        <Progress Class="mb-3">
-            <ProgressBar Color="ProgressColor.Success" Width="70" />
-        </Progress>
-    </div>
-    <div class="skill">
-        <label>Japanese:</label>
-        <Progress Class="mb-3">
-            <ProgressBar Color="ProgressColor.Success" Width="40" />
-        </Progress>
-    </div>
-    <hr />
-
     <h1>Get in Touch</h1>
     <p>
-        If you're ready to explore how I can take your business to new heights, <a href="contact">contact</a> me today. I am excited to learn more about your goals and discuss how we can work together to turn your vision into a reality.
+        If you're ready to explore how I can take your business to new heights, <a href="mailto:dieterclaessens3@hotmail.com">contact</a> me today. I am excited to learn more about your goals and discuss how we can work together to turn your vision into a reality.
 
         Thank you for considering me as your software consulting partner.
 
     </p>
 </div>
 
-@code {
-    TypewriterBuilder typewriter = new TypewriterBuilder(defaultCharacterPause: 6)
-        .TypeString("I am a Software engineer.", 50)
-        .Pause(1000)
-        .DeleteAll(30)
-        .TypeString("I love developing apps.", 50)
-        .Pause(1000)
-        .DeleteAll(30)
-        .TypeString("I make .NET applications.", 50)
-        .Pause(500)
-        .DeleteAll(30)
-        .Pause(100)
-        .Loop();
-}
-
-
-@*<SurveyPrompt Title="How is Blazor working for you?" />*@
+@code {}

@@ -1,0 +1,46 @@
+﻿@page "/portfolio"
+
+
+<h1>Portfolio</h1>
+<h3>BordenApp - Nov 2023</h3>
+<p>An app I build for a customer to create signs and map them to google maps.</p>
+<div class="slideshow-container">
+    @foreach (var slide in slides)
+    {
+        <div class="slide" style="display: @(slide == currentSlide ? "block" : "none")">
+            <img class="slideImg" src="@slide.ImageUrl" alt="Slide">
+        </div>
+    }
+</div>
+
+<hr/>
+
+@code {
+    private class Slide
+    {
+        public string ImageUrl { get; set; }
+    }
+
+    private List<Slide> slides = new List<Slide>
+    {
+        new Slide { ImageUrl = "Images/BordenAppProjectOverview.png" },
+        new Slide { ImageUrl = "Images/BordenAppSignOverview.png" },
+        // Add more slides as needed
+    };
+
+    private int currentIndex = 0;
+    private Slide currentSlide => slides[currentIndex];
+
+    protected override void OnInitialized()
+    {
+        var timer = new System.Timers.Timer(3000); // Change the interval as needed (in milliseconds)
+        timer.Elapsed += (sender, e) => NextSlide();
+        timer.Start();
+    }
+
+    private void NextSlide()
+    {
+        currentIndex = (currentIndex + 1) % slides.Count;
+        InvokeAsync(() => StateHasChanged());
+    }
+}

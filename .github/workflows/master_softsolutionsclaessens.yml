@@ -54,4 +54,4 @@ jobs:
           app-name: 'SoftSolutionsClaessens'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_82FD69EDEAC340E694329776DE9F6C97 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5925F54CA3BC45D39EB497D31526EB42 }}
